@@ -1,0 +1,46 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+employer.job.list.label.reference = Reference
+employer.job.list.label.deadline = Deadline
+employer.job.list.label.title = Title
+
+employer.job.form.label.reference = Reference:
+employer.job.form.label.title = Title:
+employer.job.form.label.deadline = Deadline:
+employer.job.form.label.salary = Salary:
+employer.job.form.label.moreInfo = More info:
+employer.job.form.label.description = Description:
+employer.job.form.label.finalMode = Published mode
+
+employer.job.form.button.duty.create = Create a duty for this job
+employer.job.form.button.duties = Duties list from this job
+employer.job.form.button.auditRecords = Audit records list from this job
+
+employer.job.form.button.update = Update
+employer.job.form.button.create = Create
+employer.job.form.button.delete = Delete
+employer.job.form.button.publish = Publish
+
+employer.job.error.reference = The reference is not unique
+employer.job.deadline.before = The deadline date is before from now!
+employer.job.salary.eur = The monetary unit must be euros (€ or EUR)!
+employer.job.salary.higher = The salary currency have to be higher than zero!
+employer.job.error.spam = The text string exceeds the spam percentage
+employer.job.error.descriptor = You can not publish a job that has no descriptor
+employer.job.error.workload = You can not publish a job whose percentage of total work is not equal to 100%
+employer.job.error.applications = You can not delete a job with applications
+employer.job.error.finalMode = You can not update published jobs
+
+
+employer.job.form.button.return = Return
+
+
