@@ -49,7 +49,7 @@ public class PhoneFormatter implements Formatter<Phone> {
 
 		countryCodeRegex = "\\+\\d{1,3}";
 		areaCodeRegex = "\\d{1,6}";
-		numberRegex = "\\d{1,9}([\\s-]\\d{1,9]){0,5}";
+		numberRegex = "\\d{1,9}([\\s-]\\d{1,9}){0,5}";
 		phoneRegex = String.format( // 
 			"^\\s*(?<CC>%1$s)(\\s+\\((?<AC>%2$s)\\)\\s+|\\s+)(?<N>%3$s)\\s*$", countryCodeRegex, areaCodeRegex, numberRegex);
 
@@ -72,7 +72,6 @@ public class PhoneFormatter implements Formatter<Phone> {
 		}
 
 		return result;
-
 	}
 
 }

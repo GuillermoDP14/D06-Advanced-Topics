@@ -27,7 +27,7 @@ public class Phone extends DomainDatatype {
 	@Range(min = 1, max = 999)
 	private Integer				countryCode;
 
-	@Pattern(regexp = "\\d{1, 6}", message = "default.error.conversion")
+	@Pattern(regexp = "\\d{1,6}", message = "default.error.conversion")
 	private String				areaCode;
 
 	@NotBlank

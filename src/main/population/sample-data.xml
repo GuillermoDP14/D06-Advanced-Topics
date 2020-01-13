@@ -330,6 +330,7 @@
 				<property name="name" value="Employer" />
 				<property name="surname" value="One" />
 				<property name="email" value="employer1@acme.com" />
+				<property name="phone" value="+1 123456" />
 			</bean>
 		</property>
 		<property name="roles">
@@ -359,6 +360,7 @@
 				<property name="name" value="Employer" />
 				<property name="surname" value="One" />
 				<property name="email" value="employer2@acme.com" />
+				<property name="phone" value="+44 (0) 123-456" />
 			</bean>
 		</property>
 		<property name="roles">
@@ -390,6 +392,7 @@
 				<property name="name" value="Worker" />
 				<property name="surname" value="One" />
 				<property name="email" value="worker1@acme.com" />
+				<property name="phone" value="+34 123 456 789" />
 			</bean>
 		</property>
 		<property name="roles">
@@ -419,6 +422,7 @@
 				<property name="name" value="Worker" />
 				<property name="surname" value="Two" />
 				<property name="email" value="worker2@acme.com" />
+				<property name="phone" value="+012 (0345) 678-900" />
 			</bean>
 		</property>
 		<property name="roles">
@@ -725,6 +729,7 @@
 				<property name="name" value="Auditor" />
 				<property name="surname" value="One" />
 				<property name="email" value="auditor1@acme.com" />
+				<property name="phone" value="+021 (9876) 123-456" />
 			</bean>
 		</property>
 		<property name="roles">
@@ -754,6 +759,7 @@
 				<property name="name" value="Auditor" />
 				<property name="surname" value="One" />
 				<property name="email" value="auditor2@acme.com" />
+				<property name="phone" value="+34 (9) 654-987" />
 			</bean>
 		</property>
 		<property name="roles">
