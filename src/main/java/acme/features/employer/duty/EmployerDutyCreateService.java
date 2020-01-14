@@ -109,12 +109,15 @@ public class EmployerDutyCreateService implements AbstractCreateService<Employer
 			workPercentage += d.getPercentage();
 		}
 
-		Boolean isHigherThan100 = !(request.getModel().getDouble("percentage") + workPercentage > 100.00);
-		Boolean isNegative = !(request.getModel().getDouble("percentage") < 0.00);
-		Boolean isHigher = !(request.getModel().getDouble("percentage") > 100.00);
-		errors.state(request, isHigherThan100, "percentage", "employer.duty.error.higher100");
-		errors.state(request, isNegative, "percentage", "employer.duty.error.negative");
-		errors.state(request, isHigher, "percentage", "employer.duty.error.higher");
+		Boolean isHigherThan100 = false, isNegative = false, isHigher = false;
+		if (request.getModel().getDouble("percentage") != null) {
+			isHigherThan100 = !(request.getModel().getDouble("percentage") + workPercentage > 100.00);
+			isNegative = !(request.getModel().getDouble("percentage") <= 0.00);
+			isHigher = !(request.getModel().getDouble("percentage") > 100.00);
+			errors.state(request, isHigherThan100, "percentage", "employer.duty.error.higher100");
+			errors.state(request, isNegative, "percentage", "employer.duty.error.negative");
+			errors.state(request, isHigher, "percentage", "employer.duty.error.higher");
+		}
 
 		Boolean spam1, spam2 = null;
 		spam1 = this.esSpam(entity.getTitle());

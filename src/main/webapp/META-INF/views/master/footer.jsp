@@ -17,6 +17,7 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:footer-panel>
+
 	<acme:footer-subpanel code="master.footer.title.about">
 		<acme:footer-option icon="fa fa-building" code="master.footer.label.company" action="/master/company"/>
 		<acme:footer-option icon="fa fa-file" code="master.footer.label.license" action="/master/license"/>		
@@ -37,3 +38,8 @@
 	</acme:footer-logo>		
 	
 </acme:footer-panel>
+
+		<div class="text-center">
+  			<img src="${banner.picture}" alt="${banner.slogan}" />
+  		</div>
+
