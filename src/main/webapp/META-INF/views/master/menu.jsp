@@ -88,14 +88,21 @@
 			<acme:menu-suboption code="master.menu.worker.application.list" action="/worker/application/list_mine"/>
 		</acme:menu-option>
 		
-				<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
+	
+	<!-- auditor -->	
+		
+		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
 			<acme:menu-suboption code="master.menu.auditor.job.list_mine" action="/auditor/job/list_mine"/>
 			<acme:menu-suboption code="master.menu.auditor.job.list_not_mine" action="/auditor/job/list_not_mine"/>
 		</acme:menu-option>
+
+	<!-- sponsor -->	
+		
+		<acme:menu-option code="master.menu.sponsor" access="hasRole('Sponsor')">
+			<acme:menu-suboption code="master.menu.sponsor.commercialBanner.list" action="/sponsor/commercial-banner/list_mine"/>
+		</acme:menu-option>
 		
 	</acme:menu-left>
-	
-
 
 	<acme:menu-right>
 		<acme:menu-option code="master.menu.sign-up" action="/anonymous/user-account/create" access="isAnonymous()"/>

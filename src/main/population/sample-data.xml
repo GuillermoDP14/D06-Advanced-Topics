@@ -855,7 +855,69 @@
 		<property name="auditor" ref="auditor1Auditor" />
 		<property name="job" ref="job5" />
 	</bean>
+	
 
+	<!-- Sponsors -->
+	
+	<bean name="sponsor1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="sponsor1" />
+		<property name="password" value="sponsor1" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Sponsor" />
+				<property name="surname" value="One" />
+				<property name="email" value="sponsor1@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="sponsor1Sponsor" />
+				<ref bean="sponsor1Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="sponsor1Sponsor" class="acme.entities.roles.Sponsor">
+		<property name="organisation" value="xXLosSponsorsXx" />
+		<property name="creditCard" value="6011077768867170" />
+		<property name="userAccount" ref="sponsor1UserAccount" />
+	</bean>
+
+	<bean name="sponsor1Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="sponsor1UserAccount" />
+	</bean>
+	
+		<bean name="sponsor2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="sponsor2" />
+		<property name="password" value="sponsor2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Sponsor" />
+				<property name="surname" value="Two" />
+				<property name="email" value="sponsor2@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="sponsor2Sponsor" />
+				<ref bean="sponsor2Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="sponsor2Sponsor" class="acme.entities.roles.Sponsor">
+		<property name="organisation" value="xXLosSponsorsXx" />
+		<property name="creditCard" value="3535449739621628" />
+		<property name="userAccount" ref="sponsor2UserAccount" />
+	</bean>
+
+	<bean name="sponsor2Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="sponsor2UserAccount" />
+	</bean>
+	
+	
 	<!-- Commercial Banners -->
 
 	<bean id="commercialBanner01" class="acme.entities.banners.CommercialBanner">
@@ -863,6 +925,7 @@
 		<property name="slogan" value="Promoting your business has never been easier - start designing today." />
 		<property name="target" value="https://www.signazon.com/ad-banners/" />
 		<property name="creditCard" value="370855105431034" />
+		<property name="sponsor" ref="sponsor1Sponsor" />
 	</bean>
 
 	<bean id="commercialBanner02" class="acme.entities.banners.CommercialBanner">
@@ -870,6 +933,7 @@
 		<property name="slogan" value="Banner comercial de forma abstracta vector gratuito" />
 		<property name="target" value="https://www.freepik.es/vector-gratis/banner-comercial-forma-abstracta_2989075.htm" />
 		<property name="creditCard" value="6011077768867170" />
+		<property name="sponsor" ref="sponsor1Sponsor" />
 	</bean>
 
 	<bean id="commercialBanner03" class="acme.entities.banners.CommercialBanner">
@@ -879,6 +943,7 @@
 		<property name="target"
 			value="https://www.freepik.com/free-vector/creative-turquoise-commercial-roll-up-banner_1156757.htm" />
 		<property name="creditCard" value="3535449739621628" />
+		<property name="sponsor" ref="sponsor2Sponsor" />
 	</bean>
 
 	<!-- Non-Commercial Banners -->

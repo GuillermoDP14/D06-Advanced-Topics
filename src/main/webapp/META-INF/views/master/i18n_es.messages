@@ -90,11 +90,16 @@ master.menu.employer.job.create = Crear un nuevo trabajo
 master.menu.worker = Trabajador
 master.menu.worker.application.list = Lista de solicitudes
 
-# master.menu.worker ##########################################################
+# master.menu.auditor ##########################################################
 
 master.menu.auditor = Auditor
 master.menu.auditor.job.list_mine = Trabajos en los que he escrito un registro de auditoria
 master.menu.auditor.job.list_not_mine =  Trabajos en los que no he escrito un registro de auditoria
+
+# master.menu.sponsor ##########################################################
+
+master.menu.sponsor = Patrocinador
+master.menu.sponsor.commercialBanner.list = Lista de carteles comerciales propios
 
 
 # master.menu.user-account ####################################################
