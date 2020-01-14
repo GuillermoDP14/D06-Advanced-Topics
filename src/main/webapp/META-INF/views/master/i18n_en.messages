@@ -80,11 +80,17 @@ master.menu.consumer.offer.create = Throw an offer
 master.menu.worker = Worker
 master.menu.worker.application.list = Application list
 
-# master.menu.worker ##########################################################
+# master.menu.auditor ##########################################################
 
 master.menu.auditor = Auditor
 master.menu.auditor.job.list_mine = Jobs in which I have written a audit record
 master.menu.auditor.job.list_not_mine =  Jobs in which I have not written a audit record
+
+# master.menu.sponsor ##########################################################
+
+master.menu.sponsor = Sponsor
+master.menu.sponsor.commercialBanner.list = List of own commercial banners
+master.menu.sponsor.commercialBanner.create = Create a commercial banners
 
 # master.menu.user-account ####################################################
 
@@ -97,6 +103,11 @@ master.menu.user-account.become-employer =  Become an employer
 master.menu.user-account.employer = Employer data
 master.menu.user-account.become-worker = Become a worker
 master.menu.user-account.worker = Worker data
+
+master.menu.user-account.become-auditor = Become an auditor
+master.menu.user-account.auditor = Auditor data
+master.menu.user-account.become-sponsor = Become a sponsor
+master.menu.user-account.sponsor = Sponsor data
 
 
 # master.footer ###############################################################

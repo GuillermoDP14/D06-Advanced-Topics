@@ -10,7 +10,7 @@
 - they accept any liabilities with respect to them.
 --%>
 
-<%@page language="java" import="acme.framework.helpers.PrincipalHelper,acme.entities.roles.Provider"%>
+<%@page language="java" import="acme.framework.helpers.PrincipalHelper,acme.entities.roles.Provider,acme.entities.roles.Consumer"%>
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
@@ -24,6 +24,7 @@
 		<acme:menu-option code="master.menu.authenticated.reporting" access="isAuthenticated()">			
 			<acme:menu-suboption code="master.menu.authenticated.announcement.list" action="/authenticated/announcement/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.request.list" action="/authenticated/request/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.offer.list" action="/authenticated/offer/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.company-record.list" action="/authenticated/company-record/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.investor-record.list" action="/authenticated/investor-record/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.challenge.list" action="/authenticated/challenge/list" />
@@ -32,6 +33,7 @@
 			<acme:menu-suboption code="master.menu.authenticated.thread.list" action="/authenticated/thread/list_mine" />
 		</acme:menu-option>
 
+    <!-- anonymous -->
     
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link1" action="http://www.youtube.com/"/>
@@ -42,6 +44,8 @@
       <acme:menu-suboption code="master.menu.anonymous.investor-record.list" action="/anonymous/investor-record/list"/>
       <acme:menu-suboption code="master.menu.anonymous.announcement.list" action="/anonymous/announcement/list"/>
 		</acme:menu-option>
+		
+	<!-- administrator -->	
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
@@ -59,38 +63,54 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 		</acme:menu-option>
+		
 
-
-	
+		
+	<!-- employer -->	
+		
 		<acme:menu-option code="master.menu.employer" access="hasRole('Employer')">
 			<acme:menu-suboption code="master.menu.employer.job.list" action="/employer/job/list_mine"/>
 			<acme:menu-suboption code="master.menu.employer.application.list" action="/employer/application/list_by_job"/>
 			<acme:menu-suboption code="master.menu.employer.job.create" action="/employer/job/create" />
 		</acme:menu-option>
 		
+	<!-- worker -->	
+		
 		<acme:menu-option code="master.menu.worker" access="hasRole('Worker')">
 			<acme:menu-suboption code="master.menu.worker.application.list" action="/worker/application/list_mine"/>
 		</acme:menu-option>
 		
-				<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
+	
+	<!-- auditor -->	
+		
+		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
 			<acme:menu-suboption code="master.menu.auditor.job.list_mine" action="/auditor/job/list_mine"/>
 			<acme:menu-suboption code="master.menu.auditor.job.list_not_mine" action="/auditor/job/list_not_mine"/>
 		</acme:menu-option>
+
+	<!-- sponsor -->	
+		
+		<acme:menu-option code="master.menu.sponsor" access="hasRole('Sponsor')">
+			<acme:menu-suboption code="master.menu.sponsor.commercialBanner.list" action="/sponsor/commercial-banner/list_mine"/>
+			<acme:menu-suboption code="master.menu.sponsor.commercialBanner.create" action="/sponsor/commercial-banner/create"/>
+		</acme:menu-option>
 		
 	</acme:menu-left>
-	
-
 
 	<acme:menu-right>
 		<acme:menu-option code="master.menu.sign-up" action="/anonymous/user-account/create" access="isAnonymous()"/>
 		<acme:menu-option code="master.menu.sign-in" action="/master/sign-in" access="isAnonymous()"/>
 
 		<acme:menu-option code="master.menu.user-account" access="isAuthenticated()">
-			<acme:menu-suboption code="master.menu.user-account.general-data" action="/authenticated/user-account/update"/>
+			<acme:menu-suboption code="master.menu.user-account.general-data" action="/authenticated/user-account/update"/>			
 			<acme:menu-suboption code="master.menu.user-account.become-employer" action="/authenticated/employer/create" access="!hasRole('Employer')"/>
 			<acme:menu-suboption code="master.menu.user-account.employer" action="/authenticated/employer/update" access="hasRole('Employer')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-worker" action="/authenticated/worker/create" access="!hasRole('Worker')"/>
 			<acme:menu-suboption code="master.menu.user-account.worker" action="/authenticated/worker/update" access="hasRole('Worker')"/>
+			<acme:menu-suboption code="master.menu.user-account.become-auditor" action="/authenticated/auditor/create" access="!hasRole('Auditor')"/>
+			<acme:menu-suboption code="master.menu.user-account.auditor" action="/authenticated/auditor/update" access="hasRole('Auditor')"/>
+			<acme:menu-suboption code="master.menu.user-account.become-sponsor" action="/authenticated/sponsor/create" access="!hasRole('Sponsor')"/>
+			<acme:menu-suboption code="master.menu.user-account.sponsor" action="/authenticated/sponsor/update" access="hasRole('Sponsor')"/>
 		</acme:menu-option>		
 
 
@@ -98,3 +118,4 @@
 		<acme:menu-option code="master.menu.sign-out" action="/master/sign-out" access="isAuthenticated()"/>
 	</acme:menu-right>
 </acme:menu-bar>
+
