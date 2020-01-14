@@ -17,7 +17,8 @@ sponsor.commercialBanner.form.label.slogan = Eslogán:
 sponsor.commercialBanner.form.label.target = Dirección:
 sponsor.commercialBanner.form.label.creditCard = Tarjeta de crédito:
 
-
+sponsor.commercialBanner.error.creditCard = El patrocionador necesita una tarjeta de crédito para crear carteles
+sponsor.commercialBanner.error.spam = La cadena de texto supera el porcentaje de spam
 
 sponsor.commercialBanner.form.button.return = Volver
 

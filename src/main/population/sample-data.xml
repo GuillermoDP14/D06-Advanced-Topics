@@ -909,7 +909,9 @@
 
 	<bean name="sponsor2Sponsor" class="acme.entities.roles.Sponsor">
 		<property name="organisation" value="xXLosSponsorsXx" />
-		<property name="creditCard" value="3535449739621628" />
+		<property name="creditCard" >
+			<null />
+		</property>
 		<property name="userAccount" ref="sponsor2UserAccount" />
 	</bean>
 

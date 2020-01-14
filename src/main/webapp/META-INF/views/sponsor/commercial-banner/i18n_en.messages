@@ -17,6 +17,10 @@ sponsor.commercialBanner.form.label.slogan = Slogan:
 sponsor.commercialBanner.form.label.target = Target:
 sponsor.commercialBanner.form.label.creditCard = Credit card:
 
+sponsor.commercialBanner.error.creditCard = The sponsor needs first a credit card number for make banners
+sponsor.commercialBanner.error.spam = The text string exceeds the spam percentage
+
+sponsor.commercialBanner.form.button.create = Create
 sponsor.commercialBanner.form.button.return = Return
 
 

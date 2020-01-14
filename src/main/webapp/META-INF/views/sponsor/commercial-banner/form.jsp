@@ -16,10 +16,14 @@
 
 <acme:form>
 
+
+
 	<acme:form-url code="sponsor.commercialBanner.form.label.picture" path="picture" />		
 	<acme:form-textarea code="sponsor.commercialBanner.form.label.slogan" path="slogan" />
 	<acme:form-url code="sponsor.commercialBanner.form.label.target" path="target" />	
 	<acme:form-integer code="sponsor.commercialBanner.form.label.creditCard" path="creditCard" />		
+	
+	<acme:form-submit code="sponsor.commercialBanner.form.button.create" action="/sponsor/commercial-banner/create" />
 					
 	<acme:form-return code="sponsor.commercialBanner.form.button.return" />
 	

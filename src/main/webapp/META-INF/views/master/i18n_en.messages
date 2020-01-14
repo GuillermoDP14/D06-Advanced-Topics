@@ -98,6 +98,7 @@ master.menu.auditor.job.list_not_mine =  Jobs in which I have not written a audi
 
 master.menu.sponsor = Sponsor
 master.menu.sponsor.commercialBanner.list = List of own commercial banners
+master.menu.sponsor.commercialBanner.create = Create a commercial banners
 
 # master.menu.user-account ####################################################
 

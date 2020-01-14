@@ -25,6 +25,9 @@ public class SponsorCommercialBannerController extends AbstractController<Sponso
 	@Autowired
 	private SponsorCommercialBannerShowService		showService;
 
+	@Autowired
+	private SponsorCommercialBannerCreateService	createService;
+
 
 	//	Constructors ------
 
@@ -32,6 +35,6 @@ public class SponsorCommercialBannerController extends AbstractController<Sponso
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listMineService);
-
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 	}
 }
