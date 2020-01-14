@@ -2,7 +2,11 @@
 package acme.entities.banners;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
+import acme.entities.roles.Sponsor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,5 +26,10 @@ public class NonCommercialBanner extends Banner {
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Sponsor sponsor;
 
 }

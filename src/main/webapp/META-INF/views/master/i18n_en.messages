@@ -62,6 +62,12 @@ master.menu.administrator.challenge.createChallenge = Create challenge
 master.menu.administrator.configuration = Configuration
 master.menu.administrator.shutdown = Shut down
 
+# master.menu.employer ##########################################################
+
+master.menu.employer = Employer
+master.menu.employer.job.list = List of my jobs
+master.menu.employer.application.list = List of the applications to my jobs
+master.menu.employer.job.create = Create a Job
 
 # master.menu.worker ##########################################################
 
@@ -77,8 +83,10 @@ master.menu.auditor.job.list_not_mine =  Jobs in which I have not written a audi
 # master.menu.sponsor ##########################################################
 
 master.menu.sponsor = Sponsor
-master.menu.sponsor.commercialBanner.list = List of own commercial banners
+master.menu.sponsor.commercialBanner.list = List of my commercial banners
 master.menu.sponsor.commercialBanner.create = Create a commercial banners
+master.menu.sponsor.nonCommercialBanner.list = List of my non-commercial banners
+master.menu.sponsor.nonCommercialBanner.create = Create a non-commercial banners
 
 # master.menu.user-account ####################################################
 

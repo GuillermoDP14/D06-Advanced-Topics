@@ -849,12 +849,13 @@
 	<!-- Non-Commercial Banners -->
 
 	<bean id="nonCommercialBanner01" class="acme.entities.banners.NonCommercialBanner">
-		<property name="picture" value="https://www.onlygfx.com/wp-content/uploads/2018/10/7-blue-watercolor-banner-cover.jpg" />
-		<property name="slogan" value="Blue clouds" />
-		<property name="target" value="https://www.onlygfx.com/7-blue-watercolor-banner-jpg/" />
+		<property name="picture" value="https://i.pinimg.com/236x/f5/c2/82/f5c28268c09a76a5f81215633c818faf.jpg" />
+		<property name="slogan" value="Paradise Kiss" />
+		<property name="target" value="https://www.pinterest.ch/pin/456904324696118728/" />
 		<property name="jingle">
 			<null />
 		</property>
+		<property name="sponsor" ref="sponsor2Sponsor" />
 	</bean>
 
 	<bean id="nonCommercialBanner02" class="acme.entities.banners.NonCommercialBanner">
@@ -863,6 +864,7 @@
 		<property name="slogan" value="Jingle and Mingle" />
 		<property name="target" value="https://www.etsy.com/es/listing/630144264/jingle-mingle-banner-jingle-bells-banner" />
 		<property name="jingle" value="Jingle bells, jingle bells, Jingle all the way" />
+		<property name="sponsor" ref="sponsor2Sponsor" />
 	</bean>
 
 	<bean id="nonCommercialBanner03" class="acme.entities.banners.NonCommercialBanner">
@@ -873,6 +875,7 @@
 		<property name="jingle">
 			<null />
 		</property>
+		<property name="sponsor" ref="sponsor1Sponsor" />
 	</bean>
 
 </beans>

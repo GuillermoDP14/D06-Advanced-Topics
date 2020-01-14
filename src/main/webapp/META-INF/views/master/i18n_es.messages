@@ -86,8 +86,10 @@ master.menu.auditor.job.list_not_mine =  Trabajos en los que no he escrito un re
 # master.menu.sponsor ##########################################################
 
 master.menu.sponsor = Patrocinador
-master.menu.sponsor.commercialBanner.list = Lista de carteles comerciales propios
+master.menu.sponsor.commercialBanner.list = Lista de mis carteles comerciales 
 master.menu.sponsor.commercialBanner.create = Crear un carteles comercial
+master.menu.sponsor.nonCommercialBanner.list = Lista de mis carteles no comerciales 
+master.menu.sponsor.nonCommercialBanner.create = Crear un cartel no comercial
 
 
 # master.menu.user-account ####################################################
