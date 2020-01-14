@@ -42,7 +42,6 @@ master.menu.authenticated = Autenticado
 master.menu.authenticated.reporting = Autenticado
 master.menu.authenticated.announcement.list = Anuncios más nuevos
 master.menu.authenticated.request.list = Peticiones activas
-master.menu.authenticated.offer.list = Ofertas activas
 master.menu.authenticated.company-record.list = Lista de Registros de Compañías
 master.menu.authenticated.investor-record.list =  Lista de Registros de Inversiones
 master.menu.authenticated.challenge.list = Lista de desafíos
@@ -70,12 +69,6 @@ master.menu.administrator.shutdown = Parar el sistema
 master.menu.provider = Proveedor
 master.menu.provider.favourite-link = Enlace favorito
 master.menu.provider.request.create = Crear peticion
-
-# master.menu.consumer ##########################################################
-
-master.menu.consumer = Consumidor
-master.menu.consumer.favourite-link = Enlace favorito
-master.menu.consumer.offer.create = Lanzar oferta
 
 # master.menu.employer ##########################################################
 
@@ -109,9 +102,6 @@ master.menu.user-account = Cuenta
 master.menu.user-account.general-data = Datos generales
 master.menu.user-account.provider = Datos de proveedor
 master.menu.user-account.become-provider = Hazte proveedor
-master.menu.user-account.consumer = Datos de consumidor
-master.menu.user-account.become-consumer = Hazte consumidor
-
 master.menu.user-account.become-employer = Hazte empleador
 master.menu.user-account.employer = Datos de empleador
 master.menu.user-account.become-worker = Hazte trabajador

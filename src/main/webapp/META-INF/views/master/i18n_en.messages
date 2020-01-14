@@ -43,7 +43,6 @@ master.menu.authenticated = Authenticated
 master.menu.authenticated.reporting = Authenticated
 master.menu.authenticated.announcement.list = Newest announcements
 master.menu.authenticated.request.list = Active requests
-master.menu.authenticated.offer.list = Active offers
 master.menu.authenticated.company-record.list = Company Records List
 master.menu.authenticated.investor-record.list = Investor Records List
 master.menu.authenticated.challenge.list = List challenges
@@ -76,13 +75,6 @@ master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
 master.menu.consumer.offer.create = Throw an offer
 
-# master.menu.employer ##########################################################
-
-master.menu.employer = Employer
-master.menu.employer.job.list = List of my jobs
-master.menu.employer.application.list = Applications by job list
-master.menu.employer.job.create = Create a new job
-
 # master.menu.worker ##########################################################
 
 master.menu.worker = Worker
@@ -104,8 +96,6 @@ master.menu.sponsor.commercialBanner.create = Create a commercial banners
 
 master.menu.user-account = Account
 master.menu.user-account.general-data = General data
-master.menu.user-account.provider = Provider data
-master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
 
