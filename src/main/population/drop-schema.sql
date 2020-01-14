@@ -31,10 +31,6 @@
        drop 
        foreign key FK_h52w0f3wjoi68b63wv9vwon57;
 
-    alter table `consumer` 
-       drop 
-       foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
-
     alter table `duty` 
        drop 
        foreign key `FK3cc3garl37bl7gswreqwr7pj4`;
@@ -90,8 +86,6 @@
     drop table if exists `company_record`;
 
     drop table if exists `configuration`;
-
-    drop table if exists `consumer`;
 
     drop table if exists `descriptor`;
 
