@@ -125,21 +125,6 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>392</x>
-      <y>120</y>
-      <w>160</w>
-      <h>72</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Role&gt;&gt;
-Provider
---
-+ company: String {NotBlank}
-+ sector: String {NotBlank}</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
       <x>0</x>
       <y>192</y>
       <w>176</w>
@@ -225,45 +210,6 @@ has v</panel_attributes>
 + moreInfo: String {URL}
 + text: String {NotBlank}
 
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>0</x>
-      <y>400</y>
-      <w>368</w>
-      <h>104</h>
-    </coordinates>
-    <panel_attributes>Request
---
-+ title: String {NotBlank}
-+ moment: Date {Temporal(TIMESTAMP), Past}
-+ deadline: Date {Temporal(TIMESTAMP)}
-+ text: String {NotBlank}
-+ reward: Money 
-+ ticker: String {NotBlank, Pattern(regexp = "^([R][A-Z]{4}[-][0-9]{5})$")}
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>0</x>
-      <y>512</y>
-      <w>368</w>
-      <h>120</h>
-    </coordinates>
-    <panel_attributes>Offer
---
-+ title: String {NotBlank}
-+ moment: Date {Temporal(TIMESTAMP), Past}
-+ deadline: Date {Temporal(TIMESTAMP)}
-+ text: String {NotBlank}
-+ minMoney: Money 
-+ maxMoney: Money 
-+ ticker: String {NotBlank, Pattern(regexp = "^([O][A-Z]{4}[-][0-9]{5})$")}
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -403,17 +349,6 @@ m2=0..n
 
 "Registered by"</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0;170.0;70.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>544</x>
-      <y>152</y>
-      <w>56</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>50.0;80.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>

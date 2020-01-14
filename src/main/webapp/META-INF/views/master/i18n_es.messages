@@ -64,12 +64,6 @@ master.menu.administrator.challenge.createChallenge = Crear reto
 master.menu.administrator.configuration = Configuracion
 master.menu.administrator.shutdown = Parar el sistema
 
-# master.menu.provider ########################################################
-
-master.menu.provider = Proveedor
-master.menu.provider.favourite-link = Enlace favorito
-master.menu.provider.request.create = Crear peticion
-
 # master.menu.employer ##########################################################
 
 master.menu.employer = Empleador
@@ -94,8 +88,6 @@ master.menu.auditor.job.list_not_mine =  Trabajos en los que no he escrito un re
 
 master.menu.user-account = Cuenta
 master.menu.user-account.general-data = Datos generales
-master.menu.user-account.provider = Datos de proveedor
-master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.become-employer = Hazte empleador
 master.menu.user-account.employer = Datos de empleador
 master.menu.user-account.become-worker = Hazte trabajador

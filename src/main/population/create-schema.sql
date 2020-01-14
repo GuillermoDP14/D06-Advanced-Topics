@@ -169,30 +169,6 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `offer` (
-       `id` integer not null,
-        `version` integer not null,
-        `deadline` datetime(6),
-        `max_money_amount` double precision,
-        `max_money_currency` varchar(255),
-        `min_money_amount` double precision,
-        `min_money_currency` varchar(255),
-        `moment` datetime(6),
-        `text` varchar(255),
-        `ticker` varchar(255),
-        `title` varchar(255),
-        primary key (`id`)
-    ) engine=InnoDB;
-
-    create table `provider` (
-       `id` integer not null,
-        `version` integer not null,
-        `user_account_id` integer,
-        `company` varchar(255),
-        `sector` varchar(255),
-        primary key (`id`)
-    ) engine=InnoDB;
-
     create table `request` (
        `id` integer not null,
         `version` integer not null,
@@ -254,11 +230,6 @@
 
     alter table `job` 
        add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);
-create index IDXq2o9psuqfuqmq59f0sq57x9uf on `offer` (`deadline`);
-create index IDXeg8w0g0ffygptsy2hj2wijx9x on `offer` (`deadline`, `moment`);
-
-    alter table `offer` 
-       add constraint UK_iex7e8fs0fh89yxpcnm1orjkm unique (`ticker`);
 create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
 create index IDXg88gkl67vpjvt7ps3qc8toigb on `request` (`deadline`, `moment`);
 
@@ -332,11 +303,6 @@ create index IDXg88gkl67vpjvt7ps3qc8toigb on `request` (`deadline`, `moment`);
        add constraint `FK28hjkn063wrsjuiyyf8sm3s2v` 
        foreign key (`thread_id`) 
        references `thread` (`id`);
-
-    alter table `provider` 
-       add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
-       foreign key (`user_account_id`) 
-       references `user_account` (`id`);
 
     alter table `thread_authenticated` 
        add constraint `FKkuamwlt147dsxim98bfhh4dsr` 

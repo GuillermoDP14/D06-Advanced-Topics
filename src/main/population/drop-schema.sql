@@ -51,10 +51,6 @@
        drop 
        foreign key `FK28hjkn063wrsjuiyyf8sm3s2v`;
 
-    alter table `provider` 
-       drop 
-       foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
-
     alter table `thread_authenticated` 
        drop 
        foreign key `FKkuamwlt147dsxim98bfhh4dsr`;
@@ -98,10 +94,6 @@
     drop table if exists `job`;
 
     drop table if exists `message`;
-
-    drop table if exists `offer`;
-
-    drop table if exists `provider`;
 
     drop table if exists `request`;
 
