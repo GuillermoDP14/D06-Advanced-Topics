@@ -77,11 +77,17 @@ master.menu.employer.job.create = Crear un nuevo trabajo
 master.menu.worker = Trabajador
 master.menu.worker.application.list = Lista de solicitudes
 
-# master.menu.worker ##########################################################
+# master.menu.auditor ##########################################################
 
 master.menu.auditor = Auditor
 master.menu.auditor.job.list_mine = Trabajos en los que he escrito un registro de auditoria
 master.menu.auditor.job.list_not_mine =  Trabajos en los que no he escrito un registro de auditoria
+
+# master.menu.sponsor ##########################################################
+
+master.menu.sponsor = Patrocinador
+master.menu.sponsor.commercialBanner.list = Lista de carteles comerciales propios
+master.menu.sponsor.commercialBanner.create = Crear un carteles comercial
 
 
 # master.menu.user-account ####################################################
@@ -91,7 +97,13 @@ master.menu.user-account.general-data = Datos generales
 master.menu.user-account.become-employer = Hazte empleador
 master.menu.user-account.employer = Datos de empleador
 master.menu.user-account.become-worker = Hazte trabajador
-master.menu.user-account.worker = Datos de rabajador
+master.menu.user-account.worker = Datos de trabajador
+
+master.menu.user-account.become-auditor = Hazte auditor
+master.menu.user-account.auditor = Datos de auditor
+master.menu.user-account.become-sponsor = Hazte patrocinador
+master.menu.user-account.sponsor = Datos de patrocinador
+
 
 
 # master.footer ###############################################################
