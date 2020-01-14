@@ -23,8 +23,6 @@
 		
 		<acme:menu-option code="master.menu.authenticated.reporting" access="isAuthenticated()">			
 			<acme:menu-suboption code="master.menu.authenticated.announcement.list" action="/authenticated/announcement/list"/>
-			<acme:menu-suboption code="master.menu.authenticated.request.list" action="/authenticated/request/list"/>
-			<acme:menu-suboption code="master.menu.authenticated.offer.list" action="/authenticated/offer/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.company-record.list" action="/authenticated/company-record/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.investor-record.list" action="/authenticated/investor-record/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.challenge.list" action="/authenticated/challenge/list" />
@@ -62,9 +60,7 @@
 			<acme:menu-suboption code="master.menu.administrator.challenge.createChallenge" action="/administrator/challenge/create" />
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
-		</acme:menu-option>
-		
-
+		</acme:menu-option>	
 		
 	<!-- employer -->	
 		

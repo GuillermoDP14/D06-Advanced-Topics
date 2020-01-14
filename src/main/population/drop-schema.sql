@@ -134,3 +134,4 @@
     drop table if exists `worker`;
 
     drop table if exists `hibernate_sequence`;
+
