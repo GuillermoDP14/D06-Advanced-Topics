@@ -9,6 +9,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.entities.banners.Banner;
+import acme.entities.banners.NonCommercialBanner;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
@@ -28,12 +29,17 @@ public interface BannerRepository extends AbstractRepository {
 		List<Banner> list;
 
 		bannerCount = this.countBanners();
+		//Este arreglo lo he tenido que hacer, sino en el despliegue al no haber banners, devolverá un error 500
 		random = ThreadLocalRandom.current();
-		bannerIndex = random.nextInt(0, bannerCount);
+		if (bannerCount != 0) {
+			bannerIndex = random.nextInt(0, bannerCount);
 
-		page = PageRequest.of(bannerIndex, 1);
-		list = this.findManyBanners(page);
-		result = list.isEmpty() ? null : list.get(0);
+			page = PageRequest.of(bannerIndex, 1);
+			list = this.findManyBanners(page);
+			result = list.isEmpty() ? null : list.get(0);
+		} else {
+			result = new NonCommercialBanner();
+		}
 
 		return result;
 
