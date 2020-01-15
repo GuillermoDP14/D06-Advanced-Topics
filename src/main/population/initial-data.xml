@@ -107,7 +107,7 @@
 		<property name="userAccount" ref="sponsorUserAccount" />
 	</bean>
 
-	<bean name="sponsor1Authenticated" class="acme.framework.entities.Authenticated">
+	<bean name="sponsorAuthenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="sponsorUserAccount" />
 	</bean>
 	
