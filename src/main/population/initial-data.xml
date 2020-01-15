@@ -80,128 +80,94 @@
 		<property name="threshold" value="1.0"/>	
 	</bean>
 	
-		<!-- Sponsors -->
-	
-	<bean name="sponsor1UserAccount" class="acme.framework.entities.UserAccount">
-		<property name="username" value="sponsor1" />
-		<property name="password" value="sponsor1" />
+<!-- Sponsors -->
+
+	<bean name="sponsorUserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="sponsor" />
+		<property name="password" value="sponsor" />
 		<property name="enabled" value="true" />
 		<property name="identity">
 			<bean class="acme.datatypes.UserIdentity">
 				<property name="name" value="Sponsor" />
 				<property name="surname" value="One" />
-				<property name="email" value="sponsor1@acme.com" />
+				<property name="email" value="sponsor@acme.com" />
 			</bean>
 		</property>
 		<property name="roles">
 			<list>
-				<ref bean="sponsor1Sponsor" />
-				<ref bean="sponsor1Authenticated" />
+				<ref bean="sponsorSponsor" />
+				<ref bean="sponsorAuthenticated" />
 			</list>
 		</property>
 	</bean>
 
-	<bean name="sponsor1Sponsor" class="acme.entities.roles.Sponsor">
+	<bean name="sponsorSponsor" class="acme.entities.roles.Sponsor">
 		<property name="organisation" value="xXLosSponsorsXx" />
 		<property name="creditCard" value="6011077768867170" />
-		<property name="userAccount" ref="sponsor1UserAccount" />
+		<property name="userAccount" ref="sponsorUserAccount" />
 	</bean>
 
 	<bean name="sponsor1Authenticated" class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="sponsor1UserAccount" />
+		<property name="userAccount" ref="sponsorUserAccount" />
 	</bean>
 	
-		<bean name="sponsor2UserAccount" class="acme.framework.entities.UserAccount">
-		<property name="username" value="sponsor2" />
-		<property name="password" value="sponsor2" />
-		<property name="enabled" value="true" />
-		<property name="identity">
-			<bean class="acme.datatypes.UserIdentity">
-				<property name="name" value="Sponsor" />
-				<property name="surname" value="Two" />
-				<property name="email" value="sponsor2@acme.com" />
-			</bean>
-		</property>
-		<property name="roles">
-			<list>
-				<ref bean="sponsor2Sponsor" />
-				<ref bean="sponsor2Authenticated" />
-			</list>
-		</property>
-	</bean>
+		<!-- Non-Commercial Banners -->
 
-	<bean name="sponsor2Sponsor" class="acme.entities.roles.Sponsor">
-		<property name="organisation" value="xXLosSponsorsXx" />
-		<property name="creditCard" >
-			<null />
-		</property>
-		<property name="userAccount" ref="sponsor2UserAccount" />
-	</bean>
-
-	<bean name="sponsor2Authenticated" class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="sponsor2UserAccount" />
-	</bean>
-	
-	
-	<!-- Commercial Banners -->
-
-	<bean id="commercialBanner01" class="acme.entities.banners.CommercialBanner">
-		<property name="picture" value="https://i.signazon.com/i/splashs6/ad-banners-splash-2.jpg?v=4" />
-		<property name="slogan" value="Promoting your business has never been easier - start designing today." />
-		<property name="target" value="https://www.signazon.com/ad-banners/" />
-		<property name="creditCard" value="370855105431034" />
-		<property name="sponsor" ref="sponsor1Sponsor" />
-	</bean>
-
-	<bean id="commercialBanner02" class="acme.entities.banners.CommercialBanner">
-		<property name="picture" value="https://image.freepik.com/vector-gratis/banner-comercial-forma-abstracta_1409-683.jpg" />
-		<property name="slogan" value="Banner comercial de forma abstracta vector gratuito" />
-		<property name="target" value="https://www.freepik.es/vector-gratis/banner-comercial-forma-abstracta_2989075.htm" />
-		<property name="creditCard" value="6011077768867170" />
-		<property name="sponsor" ref="sponsor1Sponsor" />
-	</bean>
-
-	<bean id="commercialBanner03" class="acme.entities.banners.CommercialBanner">
-		<property name="picture"
-			value="https://image.freepik.com/free-vector/creative-turquoise-commercial-roll-up-banner_1201-1088.jpg" />
-		<property name="slogan" value="Creative turquoise commercial roll up banner Free Vector" />
-		<property name="target"
-			value="https://www.freepik.com/free-vector/creative-turquoise-commercial-roll-up-banner_1156757.htm" />
-		<property name="creditCard" value="3535449739621628" />
-		<property name="sponsor" ref="sponsor2Sponsor" />
-	</bean>
-
-	<!-- Non-Commercial Banners -->
-
-	<bean id="nonCommercialBanner01" class="acme.entities.banners.NonCommercialBanner">
-		<property name="picture" value="https://i.pinimg.com/236x/f5/c2/82/f5c28268c09a76a5f81215633c818faf.jpg" />
-		<property name="slogan" value="Paradise Kiss" />
-		<property name="target" value="https://www.pinterest.ch/pin/456904324696118728/" />
+	<bean id="nonCommercialBanner1" class="acme.entities.banners.NonCommercialBanner">
+		<property name="picture" value="https://i.imgur.com/8YcXhS0.png" />
+		<property name="slogan" value="Banner 1" />
+		<property name="target" value="https://imgur.com/" />
 		<property name="jingle">
 			<null />
 		</property>
-		<property name="sponsor" ref="sponsor2Sponsor" />
+		<property name="sponsor" ref="sponsorSponsor" />
 	</bean>
 
-	<bean id="nonCommercialBanner02" class="acme.entities.banners.NonCommercialBanner">
-		<property name="picture"
-			value="https://i.etsystatic.com/18189684/r/il/79d244/2096843860/il_fullxfull.2096843860_hjxj.jpg" />
-		<property name="slogan" value="Jingle and Mingle" />
-		<property name="target" value="https://www.etsy.com/es/listing/630144264/jingle-mingle-banner-jingle-bells-banner" />
-		<property name="jingle" value="Jingle bells, jingle bells, Jingle all the way" />
-		<property name="sponsor" ref="sponsor2Sponsor" />
-	</bean>
-
-	<bean id="nonCommercialBanner03" class="acme.entities.banners.NonCommercialBanner">
-		<property name="picture"
-			value="https://3c5239fcccdc41677a03-1135555c8dfc8b32dc5b4bc9765d8ae5.ssl.cf1.rackcdn.com/964f6093-2715-4667-88b5-7d04071dc3b8.jpg" />
-		<property name="slogan" value="Non-Profit Banners" />
-		<property name="target" value="https://www.banners.com/non-profit-banners" />
+	<bean id="nonCommercialBanner2" class="acme.entities.banners.NonCommercialBanner">
+		<property name="picture" value="https://i.imgur.com/NGLSjk6.png" />
+		<property name="slogan" value="Banner 2" />
+		<property name="target" value="https://imgur.com/" />
 		<property name="jingle">
 			<null />
 		</property>
-		<property name="sponsor" ref="sponsor1Sponsor" />
+		<property name="sponsor" ref="sponsorSponsor" />
 	</bean>
+
+	
+		<bean id="nonCommercialBanner3" class="acme.entities.banners.NonCommercialBanner">
+		<property name="picture" value="https://i.imgur.com/2eVF1HG.png" />
+		<property name="slogan" value="Banner 3" />
+		<property name="target" value="https://imgur.com/" />
+		<property name="jingle">
+			<null />
+		</property>
+		<property name="sponsor" ref="sponsorSponsor" />
+	</bean>
+
+
+	<bean id="nonCommercialBanner4" class="acme.entities.banners.NonCommercialBanner">
+		<property name="picture" value="https://i.imgur.com/fihihcF.png" />
+		<property name="slogan" value="Banner 4" />
+		<property name="target" value="https://imgur.com/" />
+		<property name="jingle">
+			<null />
+		</property>
+		<property name="sponsor" ref="sponsorSponsor" />
+	</bean>
+
+	
+	<bean id="nonCommercialBanner5" class="acme.entities.banners.NonCommercialBanner">
+		<property name="picture" value="https://i.imgur.com/MtBRoNP.png" />
+		<property name="slogan" value="Banner 5" />
+		<property name="target" value="https://imgur.com/" />
+		<property name="jingle">
+			<null />
+		</property>
+		<property name="sponsor" ref="sponsorSponsor" />
+	</bean>
+
+	
+
 
 	
 </beans>
