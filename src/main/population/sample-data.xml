@@ -15,7 +15,7 @@
 
 	<bean id="announcement1" class="acme.entities.announcements.Announcement">
 		<property name="title" value="Sample announcement 01" />
-		<property name="moment" value="2019/12/03 10:40" />
+		<property name="moment" value="2020/01/13 10:40" />
 		<property name="moreInfo">
 			<null />
 		</property>
@@ -24,14 +24,14 @@
 
 	<bean id="announcement2" class="acme.entities.announcements.Announcement">
 		<property name="title" value="Sample announcement 02" />
-		<property name="moment" value="2019/10/28 12:30" />
+		<property name="moment" value="2019/12/28 12:30" />
 		<property name="moreInfo" value="http://www.example.com" />
 		<property name="text" value="This is the description of a sample announcement" />
 	</bean>
 
 	<bean id="announcement3" class="acme.entities.announcements.Announcement">
 		<property name="title" value="Sample announcement 03" />
-		<property name="moment" value="2019/05/20 09:40" />
+		<property name="moment" value="2019/12/30 09:40" />
 		<property name="moreInfo" value="http://www.example.com" />
 		<property name="text" value="This is the description of a sample announcement" />
 	</bean>
@@ -490,7 +490,7 @@
 
 	<bean name="application1" class="acme.entities.applications.Application">
 		<property name="reference" value="EMP1-JOB1:WORK1" />
-		<property name="moment" value="2000/12/11 23:59" />
+		<property name="moment" value="2019/12/11 23:59" />
 		<property name="status" value="PENDING" />
 		<property name="statement" value="Statement" />
 		<property name="skills" value="Useful and handful" />
@@ -504,8 +504,8 @@
 
 	<bean name="application2" class="acme.entities.applications.Application">
 		<property name="reference" value="EMP1-JOB2:WORK1" />
-		<property name="moment" value="2000/12/11 23:59" />
-		<property name="status" value="ACCEPTED" />
+		<property name="moment" value="2019/12/11 23:59" />
+		<property name="status" value="PENDING" />
 		<property name="statement" value="Statement" />
 		<property name="skills" value="Useful and handful" />
 		<property name="qualifications" value="Good grade in Design and Testing" />
@@ -518,7 +518,7 @@
 
 	<bean name="application3" class="acme.entities.applications.Application">
 		<property name="reference" value="EMP1-JOB3:WORK1" />
-		<property name="moment" value="2000/12/11 23:59" />
+		<property name="moment" value="2019/12/11 23:59" />
 		<property name="status" value="ACCEPTED" />
 		<property name="statement" value="Statement" />
 		<property name="skills" value="Useful and handful" />
@@ -532,7 +532,7 @@
 
 	<bean name="application4" class="acme.entities.applications.Application">
 		<property name="reference" value="EMP1-JOB4:WORK1" />
-		<property name="moment" value="2000/11/11 23:59" />
+		<property name="moment" value="2019/11/11 23:59" />
 		<property name="status" value="REJECTED" />
 		<property name="statement" value="Statement" />
 		<property name="skills" value="Useful and handful" />
@@ -544,7 +544,7 @@
 
 	<bean name="application5" class="acme.entities.applications.Application">
 		<property name="reference" value="EMP1-JOB5:WORK2" />
-		<property name="moment" value="2000/12/11 23:59" />
+		<property name="moment" value="2019/12/11 23:59" />
 		<property name="status" value="PENDING" />
 		<property name="statement" value="Statement" />
 		<property name="skills" value="Useful and handful" />

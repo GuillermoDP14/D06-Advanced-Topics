@@ -102,11 +102,17 @@ public class EmployerApplicationUpdateService implements AbstractUpdateService<E
 		errors.state(request, isCorrect, "status", "employer.application.error.status");
 
 		Boolean decision, spam;
-		if (!errors.hasErrors("finalMode") && entity.getStatus().equals("REJECTED")) {
+		if (!errors.hasErrors("status") && entity.getStatus().equals("REJECTED")) {
 			decision = entity.getRejectedDecision() == null || entity.getRejectedDecision().isEmpty();
 			errors.state(request, !decision, "rejectedDecision", "employer.application.error.decision");
 			spam = this.esSpam(entity.getRejectedDecision());
 			errors.state(request, !spam, "rejectedDecision", "employer.application.error.spam");
+		}
+
+		Boolean accepted;
+		if (!errors.hasErrors("rejectedDecision") && entity.getStatus().equals("ACCEPTED")) {
+			accepted = entity.getRejectedDecision() == null || entity.getRejectedDecision().isEmpty();
+			errors.state(request, accepted, "status", "employer.application.error.accepted");
 		}
 
 	}
