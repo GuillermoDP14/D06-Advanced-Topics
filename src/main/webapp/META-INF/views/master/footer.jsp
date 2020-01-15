@@ -39,7 +39,9 @@
 	
 </acme:footer-panel>
 
+	<jstl:if test="${banner != null}">
 		<div class="text-center">
   			<img src="${banner.picture}" alt="${banner.slogan}" />
   		</div>
+  	</jstl:if>
 
